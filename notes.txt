@@ -1,0 +1,115 @@
+========================================================
+JENKINS DAY 18
+AUTOMATED ROLLBACK DEPLOYMENT
+========================================================
+
+Author:
+Subalakshmi K
+
+Project:
+Jenkins Automated Rollback Deployment
+
+Technologies:
+Jenkins
+Docker
+GitHub
+Linux
+Nginx
+Git
+CI/CD
+
+========================================================
+OBJECTIVE
+========================================================
+
+The objective of Day 18 is to understand automated rollback.
+
+Rollback means returning the application to a previous stable
+version when a newly deployed version fails.
+
+========================================================
+DEPLOYMENT FLOW
+========================================================
+
+GitHub
+   |
+   v
+Jenkins
+   |
+   v
+Build Image
+   |
+   v
+Deploy New Version
+   |
+   v
+Health Check
+   |
+   +-------- SUCCESS
+   |
+   +-------- FAILURE
+                |
+                v
+             ROLLBACK
+                |
+                v
+          STABLE VERSION
+
+========================================================
+IMPORTANT COMMANDS
+========================================================
+
+docker images
+
+docker ps
+
+docker ps -a
+
+docker build
+
+docker run
+
+docker stop
+
+docker rm
+
+docker logs
+
+docker inspect
+
+curl
+
+git status
+
+git add .
+
+git commit
+
+git push
+
+========================================================
+JENKINS CONCEPT
+========================================================
+
+Jenkins automates the deployment process.
+
+Instead of manually executing every deployment command,
+Jenkins executes the commands through the Jenkins Pipeline.
+
+========================================================
+ROLLBACK CONCEPT
+========================================================
+
+If the new version passes health checks:
+
+New Version = SUCCESS
+
+If the new version fails health checks:
+
+New Version = FAILURE
+
+The stable version should be restored.
+
+========================================================
+END OF DAY 18 NOTES
+========================================================
